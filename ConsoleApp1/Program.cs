@@ -15,12 +15,12 @@ namespace ConsoleApp1
         public static int find_it(int[] seq)
         {
             int result = 0;
-            foreach (var item in seq.GroupBy(x => x))
+            foreach (var item in seq.GroupBy(x => x)) // find dublicates
             {
-                int times = item.Count();
-                if (times % 2 != 0)
+                int times = item.Count(); // how many times dublicate number repeat
+                if (times % 2 != 0) // check if number is odd
                 {
-                    result = item.Key;
+                    result = item.Key; // return number which dublicates
                 }
             }
             return result;
