@@ -17,10 +17,10 @@ namespace ConsoleApp1
             int result = 0;
             foreach (var item in seq.GroupBy(x => x)) // find dublicates
             {
-                int times = item.Count(); // how many times dublicate number repeat
-                if (times % 2 != 0) // check if number is odd
+                int times = item.Count();             // how many times dublicate number repeat
+                if (times % 2 != 0)                   // check if number is odd
                 {
-                    result = item.Key; // return number which dublicates
+                    result = item.Key;                // return number which dublicates
                 }
             }
             return result;
